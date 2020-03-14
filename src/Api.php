@@ -1,7 +1,6 @@
 <?php
 
 namespace Yandex\Geocode;
-
 use Config;
 use Yandex\Geocode\Exception\CurlError;
 use Yandex\Geocode\Exception\ServerError;

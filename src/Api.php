@@ -6,16 +6,6 @@ use Config;
 use Yandex\Geocode\Exception\CurlError;
 use Yandex\Geocode\Exception\ServerError;
 
-/**
- * Class Api
- *
- * @package Yandex\Geocode
- *
- * @license The MIT License (MIT)
- *
- * @see http://api.yandex.ru/maps/doc/geocoder/desc/concepts/About.xml
- *
- */
 class Api
 {
     protected $_version = '1.x';
@@ -60,8 +50,8 @@ class Api
     public function setLang($language = '')
     {
         if ($language == '') {
-            if (config('yandex-geocoding.language')) {
-                $this->_filters['lang'] = (string)config('yandex-geocoding.language');
+            if (config('yandex-geocoder.language')) {
+                $this->_filters['lang'] = (string)config('yandex-geocoder.language');
             } else {
                 $this->_filters['lang'] = (string)$this->language;
             }
@@ -82,8 +72,8 @@ class Api
      */
     public function setToken(): self
     {
-        if (config('yandex-geocoding.api_key')) {
-            $this->_filters['key'] = (string)config('yandex-geocoding.api_key');
+        if (config('yandex-geocoder.api_key')) {
+            $this->_filters['key'] = (string)config('yandex-geocoder.api_key');
         }
         return $this;
     }
@@ -102,8 +92,8 @@ class Api
     public function setOffset($offset = 0)
     {
         if (!$offset) {
-            if (config('yandex-geocoding.skip_object')) {
-                $this->_filters['skip'] = (int)config('yandex-geocoding.skip_object');
+            if (config('yandex-geocoder.skip_object')) {
+                $this->_filters['skip'] = (int)config('yandex-geocoder.skip_object');
             }
         } else {
             $this->_filters['skip'] = (int)$offset;

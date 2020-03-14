@@ -22,7 +22,9 @@
     ],
     "homepage": "https://github.com/xnf4o/yandex-geocoder",
     "require": {
-        "php": ">=7.0.0"
+        "php": ">=7.0.0",
+        "ext-curl": "*",
+        "ext-json": "*"
     },
     "autoload": {
         "psr-4": {

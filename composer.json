@@ -1,0 +1,42 @@
+{
+    "name": "xnf4o/yandex-geocoder",
+    "description": "Laravel Yandex Geocoding Service",
+    "keywords": [
+        "laravel",
+        "yandex",
+        "geocode",
+        "geocoding",
+        "geocoder",
+        "address",
+        "latitude",
+        "longitude",
+        "api"
+    ],
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Evgeniy Gerasimov",
+            "email": "xnf4o@inbox.ru"
+        }
+    ],
+    "homepage": "https://github.com/xnf4o/yandex-geocoder",
+    "require": {
+        "php": ">=7.0.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Yandex\\Geocode\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Yandex\\Geocode\\YandexGeocodeServiceProvider"
+            ],
+            "aliases": {
+                "YaGeo": "Yandex\\Geocode\\Facades\\YandexGeocodeFacade"
+            }
+        }
+    }
+}

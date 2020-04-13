@@ -23,7 +23,7 @@ class Api
     /**
      * @return $this
      */
-    public function clear()
+    public function clear(): self
     {
         $this->_filters = array(
             'format' => 'json',
@@ -122,7 +122,7 @@ class Api
     /**
      * @return array
      */
-    public function getResponse(): array
+    public function getResponse()
     {
         return $this->_response->getList();
     }

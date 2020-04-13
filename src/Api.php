@@ -119,9 +119,6 @@ class Api
         return $this;
     }
 
-    /**
-     * @return array
-     */
     public function getResponse()
     {
         return $this->_response->getList();

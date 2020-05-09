@@ -66,7 +66,7 @@ class Api
      * @param int $offset
      * @return $this
      */
-    public function setOffset($offset = 0)
+    public function setOffset($offset = 0): self
     {
         if (!$offset) {
             if (config('yandex-geocoder.skip_object')) {

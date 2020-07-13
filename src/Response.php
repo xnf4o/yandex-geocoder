@@ -5,7 +5,7 @@ namespace Yandex\Geocode;
 class Response
 {
 
-    protected $_list = array();
+    protected $_list = [];
     protected $_data;
 
     public function __construct(array $data)
@@ -31,7 +31,7 @@ class Response
      */
     public function getList()
     {
-        foreach ($this->_list as $list) return $list;
+        return $this->_list;
     }
 
     /**
